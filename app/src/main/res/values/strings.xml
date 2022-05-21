@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">smartTravel_finalProject</string>
+    <string name="login_as_user">Login as user</string>
+    <string name="login_as_admin">Login as admin</string>
+    <string name="don_t_have_account">Don\'t have account?</string>
+    <string name="create_account">Create account!</string>
+    <string name="login">LOGIN</string>
+    <string name="welcome">Booking a bus ticket for your journeys just got easier</string>
+    <string name="explenation">Book your ticket for comfort journy from your home anytime,anywhere,anyday!</string>
+    <string name="signup">SIGNUP</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="forget_password">Forget password?</string>
+    <string name="forget_password_title">Forget password</string>
+    <string name="phone_number">Phone number</string>
+    <string name="verify_code">Verify code</string>
+    <string name="send_verify_code">Send verify code</string>
+    <string name="title_activity_main_admin">MainAdminActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="add_admin">Add Admin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_bus">Add Bus</string>
+    <string name="sourcr">Sourcr</string>
+    <string name="source">Source</string>
+    <string name="destination">Destination</string>
+    <string name="all_your_booking_have_been_downloaded_from_smart_travel">All your booking have been downloaded from smart Travel</string>
+    <string name="common_questions">Common Questions</string>
+    <string name="our_phone_number">Our phone Number:</string>
+    <string name="when_you_are_at_the_trip_point_you_will_find_a_person_at_the_desk_you_can_take_the_ticket_and_pay_the_amount">When you are at the trip point, you will find a person at the desk. You can take the ticket and pay the amount</string>
+    <string name="fell_free_to_contact_us_any_time_we_are_always_avaliable_for_you">Fell free to contact us any time, We are always avaliable for you!</string>
+    <string name="about">We are the smart travel tourism company. We offer trips at special prices. Our buses are equipped with the latest capabilities, providing various means of comfort with the availability of meals and rest stops during the trip. We have the most skilled drivers, with us your trip will be safer and more comfortable.</string>
+</resources>

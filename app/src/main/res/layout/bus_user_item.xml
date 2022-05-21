@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="30dp"
+        android:foreground="@drawable/corner"
+        app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/bus" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:padding="20dp">
+                <TextView
+                    android:id="@+id/tv_sourceUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Source"
+                    android:drawableLeft="@drawable/ic_baseline_run_circle_24red"
+                    android:drawablePadding="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/darkBlue"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/playfair_display_bold"/>
+                <TextView
+                    android:id="@+id/tv_destinationUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Destination"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/ic_baseline_run_circle_24green"
+                    android:textSize="20sp"
+                    android:textColor="@color/darkBlue"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/playfair_display_bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+
+                android:layout_gravity="center">
+                <TextView
+                    android:id="@+id/tv_seatsUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20 Seats"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/tv_priceUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100$"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"/>
+
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_bookTrip"
+                android:layout_width="20dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_baseline_arrow_circle_right_24"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

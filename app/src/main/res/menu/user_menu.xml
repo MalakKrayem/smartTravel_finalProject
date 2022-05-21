@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/userhome" android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home" />
+    <item android:id="@+id/userlist" android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        android:title="My Booking" />
+    <item android:id="@+id/usersupport" android:icon="@drawable/ic_baseline_support_agent_24"
+        android:title="Support" />
+    <item android:id="@+id/usersetting" android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Setting" />
+
+</menu>

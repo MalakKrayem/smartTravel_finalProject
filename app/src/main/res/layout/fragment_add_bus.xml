@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AdminUI.AddBusFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_addbus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/playfair_display_bold"
+            android:text="@string/add_bus"
+            android:textColor="@color/darkBlue"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:foreground="@drawable/corner"
+            android:textColorHint="@color/darkBlue"
+            app:startIconDrawable="@drawable/ic_baseline_directions_bus_24">
+
+            <EditText
+                android:id="@+id/ed_source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/source"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/darkBlue"
+                android:textColorHint="@color/blue" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_destination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:foreground="@drawable/corner"
+            android:textColorHint="@color/darkBlue"
+            app:startIconDrawable="@drawable/ic_baseline_directions_bus_24">
+
+            <EditText
+                android:id="@+id/ed_destination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/destination"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/darkBlue"
+                android:textColorHint="@color/blue" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_seatsNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:foreground="@drawable/corner"
+            android:textColorHint="@color/darkBlue"
+            app:startIconDrawable="@drawable/ic_baseline_event_seat_24">
+
+            <EditText
+                android:id="@+id/ed_seatNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Seats number"
+                android:inputType="number"
+                android:textColor="@color/darkBlue"
+                android:textColorHint="@color/blue" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:foreground="@drawable/corner"
+            android:textColorHint="@color/darkBlue"
+            app:startIconDrawable="@drawable/ic_baseline_attach_money_24">
+
+            <EditText
+                android:id="@+id/ed_ticketprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ticket price"
+                android:inputType="number"
+                android:textColor="@color/darkBlue"
+                android:textColorHint="@color/blue" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btn_addbus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_marginTop="48dp"
+            android:foreground="@drawable/corner"
+            android:paddingHorizontal="50dp"
+            android:text="@string/add_bus" />
+
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
