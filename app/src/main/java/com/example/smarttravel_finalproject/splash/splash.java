@@ -40,7 +40,7 @@ public class splash extends AppCompatActivity {
                     finish();
                 }else{
                     //Go to home
-                    Intent i = new Intent(getApplicationContext(), UserMainActivity.class);
+                    Intent i = new Intent(getApplicationContext(), AdminsMainActivity.class);
                     startActivity(i);
                     finish();
                 }
