@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,8 +20,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.smarttravel_finalproject.AdminModel.Bus;
+import com.example.smarttravel_finalproject.AdminUI.AdminHomeFragment;
 import com.example.smarttravel_finalproject.R;
 
+import com.example.smarttravel_finalproject.UserModel.Trip;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -30,7 +34,6 @@ import java.util.ArrayList;
 
 
 public class UserHomeFragment extends Fragment {
-    ArrayList<Bus> trips = new ArrayList<>();
     RecyclerView rv_trips;
     FirebaseDatabase database=FirebaseDatabase.getInstance();
     FirebaseRecyclerAdapter adapter;
@@ -74,6 +77,40 @@ public class UserHomeFragment extends Fragment {
                 holder.destination.setText(model.getDestination());
                 holder.seats.setText(model.getNumOfSeats()+ " seats");
                 holder.price.setText(model.getTicketPrice()+ " $");
+                DatabaseReference tripref=database.getReference("Trips");
+                Trip trip=new Trip();
+                holder.bookTrip.setOnClickListener(view1 -> {
+                    if (Integer.parseInt(model.getNumOfSeats())>0){
+                        String avaliableSeats=model.getNumOfSeats();
+                        int seats=Integer.parseInt(avaliableSeats);
+                        seats=seats-1;
+                        Log.d("mm",seats+"");
+                        model.setNumOfSeats(seats+"");
+                        Log.d("mm",model.getNumOfSeats());
+                        reference.child(model.getId()).setValue(model);
+                        Toast.makeText(context, "Booked successfuly!", Toast.LENGTH_SHORT).show();
+
+                        DatabaseReference modelLocation=tripref.push();
+                        trip.setId(modelLocation.getKey());
+                        trip.setSource(model.getSource());
+                        trip.setDestination(model.getDestination());
+                        trip.setPrice(model.getTicketPrice());
+                        modelLocation.setValue(trip);
+                        Log.d("mm","set data fine");
+
+                        Fragment fragment = new UserListFragment();
+                        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.userfcv, fragment);
+                        fragmentTransaction.commit();
+
+
+                    }else{
+                        Toast.makeText(context, "Sorry, No avalabile seats check the another trip!", Toast.LENGTH_SHORT).show();
+                    }
+
+
+                });
             }
         };
         rv_trips = view.findViewById(R.id.rv_UserTrips);
@@ -119,23 +156,18 @@ class TripHolder extends RecyclerView.ViewHolder{
     }
 }
 
-//                holder.bookTrip.setOnClickListener(view1 -> {
-////                    String avaliableSeats=model.getNumOfSeats();
-////                    int seat=Integer.parseInt(avaliableSeats);
-////                    seat-=seat;
-////                    model.setNumOfSeats(seat+"");
-////                    reference.child(model.getId()).setValue(model.getNumOfSeats());
-////                    DatabaseReference reference=database.getReference("My Trips");
-////                    Trip trip=new Trip();
-////                    DatabaseReference modelLocation=reference.push();
-////                    trip.setId(modelLocation.getKey());
-////                    trip.setSource(model.getSource());
-////                    trip.setDestination(model.getDestination());
-////                    trip.setPrice(model.getTicketPrice());
-////                    modelLocation.setValue(trip);
-////                    Fragment fragment = new UserListFragment();
-////                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-////                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-////                    fragmentTransaction.replace(R.id.userfcv, fragment);
-////                    fragmentTransaction.commit();
+
+//                    DatabaseReference reference=database.getReference("My Trips");
+//                    Trip trip=new Trip();
+//                    DatabaseReference modelLocation=reference.push();
+//                    trip.setId(modelLocation.getKey());
+//                    trip.setSource(model.getSource());
+//                    trip.setDestination(model.getDestination());
+//                    trip.setPrice(model.getTicketPrice());
+//                    modelLocation.setValue(trip);
+//                    Fragment fragment = new UserListFragment();
+//                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                    fragmentTransaction.replace(R.id.userfcv, fragment);
+//                    fragmentTransaction.commit();
 //                });

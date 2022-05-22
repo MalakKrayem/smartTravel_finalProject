@@ -42,4 +42,12 @@
     <string name="when_you_are_at_the_trip_point_you_will_find_a_person_at_the_desk_you_can_take_the_ticket_and_pay_the_amount">When you are at the trip point, you will find a person at the desk. You can take the ticket and pay the amount</string>
     <string name="fell_free_to_contact_us_any_time_we_are_always_avaliable_for_you">Fell free to contact us any time, We are always avaliable for you!</string>
     <string name="about">We are the smart travel tourism company. We offer trips at special prices. Our buses are equipped with the latest capabilities, providing various means of comfort with the availability of meals and rest stops during the trip. We have the most skilled drivers, with us your trip will be safer and more comfortable.</string>
+    <string name="logout">Logout</string>
+    <string name="next">Next</string>
+    <string name="seats_number">Seats number</string>
+    <string name="ticket_price">Ticket price</string>
+    <string name="book_your_ticket">Book your ticket</string>
+    <string name="our_email">Our Email:</string>
+    <string name="how_to_get_your_ticket">How to get your ticket?</string>
 </resources>
+

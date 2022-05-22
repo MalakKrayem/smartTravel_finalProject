@@ -73,7 +73,7 @@
                 android:id="@+id/ed_seatNum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Seats number"
+                android:hint="@string/seats_number"
                 android:inputType="number"
                 android:textColor="@color/darkBlue"
                 android:textColorHint="@color/blue" />
@@ -91,7 +91,7 @@
                 android:id="@+id/ed_ticketprice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Ticket price"
+                android:hint="@string/ticket_price"
                 android:inputType="number"
                 android:textColor="@color/darkBlue"
                 android:textColorHint="@color/blue" />

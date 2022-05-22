@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">smartTravel_finalProject</string>
+    <string name="login_as_user">تسجيل الدخول كمستخدم</string>
+    <string name="login_as_admin">تسجيل الدخول كأدمن</string>
+    <string name="don_t_have_account">لا تملك حساب؟</string>
+    <string name="create_account">انشأ حساب جديد!</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="welcome">أصبح حجز تذكرة حافلة لرحلاتك أسهل</string>
+    <string name="explenation">احجز تذكرتك للاستمتاع بجولة مريحة من منزلك في أي وقت وفي أي مكان وفي أي يوم!</string>
+    <string name="signup">اشتراك</string>
+    <string name="password">كلمة المرور</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="first_name">الاسم الاول</string>
+    <string name="last_name">الاسم الاخير</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">البريد الالكتروني</string>
+    <string name="prompt_password">كلمة المرور</string>
+    <string name="action_sign_in">تسجيل الدخول او الاشتراك</string>
+    <string name="action_sign_in_short">تسجيل الدخول</string>
+    <string name="invalid_username">اسم المستخدم غير صحيح</string>
+    <string name="invalid_password">كلمة المرور يجب ان تكون اكثر من 5 احرف</string>
+    <string name="login_failed">"فشل تسجيل الدخول"</string>
+    <string name="forget_password">هل نسيا كلمة المرور؟</string>
+    <string name="forget_password_title">Forget password</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="verify_code">كود التحقق</string>
+    <string name="send_verify_code">ارسل كود التحقق</string>
+    <string name="title_activity_main_admin">MainAdminActivity</string>
+    <string name="title_home">الصفحة الرئيسية</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="add_admin">اضافة ادمن</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="add_bus">اضافة رحلة</string>
+    <string name="source">نقطة الانطلاق</string>
+    <string name="destination">الوجهة</string>
+    <string name="all_your_booking_have_been_downloaded_from_smart_travel">Smart travelسمارت ترافيل</string>
+    <string name="common_questions">الاسئلة الشائعة</string>
+    <string name="our_phone_number">رقم الهاتف الخاص بنا:</string>
+    <string name="when_you_are_at_the_trip_point_you_will_find_a_person_at_the_desk_you_can_take_the_ticket_and_pay_the_amount">عندما تكون في نقطة الرحلة ، ستجد شخصًا على المكتب. يمكنك أخذ التذكرة ودفع المبلغ</string>
+    <string name="fell_free_to_contact_us_any_time_we_are_always_avaliable_for_you">لا تتردد في الاتصال بنا في أي وقت ، فنحن متاحون لك دائمًا!</string>
+    <string name="logout">تسجيل خروج</string>
+    <string name="next">التالي</string>
+    <string name="seats_number">عدد المقاعد</string>
+    <string name="ticket_price">سعر التذكرة</string>
+    <string name="book_your_ticket">احجز رحلتك</string>
+    <string name="our_email">البريد الالكتروني الخاص بنا</string>
+    <string name="how_to_get_your_ticket">كيف تحصل على تذكرتك؟</string>
+</resources>
+

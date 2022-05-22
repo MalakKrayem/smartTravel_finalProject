@@ -37,7 +37,7 @@
                 android:id="@+id/ed_fname_admin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="First name"
+                android:hint="@string/first_name"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/darkBlue"
                 android:textColorHint="@color/blue" />
@@ -55,7 +55,7 @@
                 android:id="@+id/ed_lname_admin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Last name"
+                android:hint="@string/last_name"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/darkBlue"
                 android:textColorHint="@color/blue" />
@@ -75,7 +75,7 @@
                 android:id="@+id/ed_email_addadmin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email"
+                android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/darkBlue"
                 android:textColorHint="@color/blue" />
@@ -98,7 +98,7 @@
                 android:id="@+id/ed_password_addadmin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password"
+                android:hint="@string/password"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/darkBlue"
                 android:textColorHint="@color/blue" />

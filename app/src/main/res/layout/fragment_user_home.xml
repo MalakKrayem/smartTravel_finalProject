@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/playfair_display_bold"
-            android:text="Book your ticket"
+            android:text="@string/book_your_ticket"
             android:textColor="@color/darkBlue"
             android:textSize="40sp"
             android:padding="10dp"

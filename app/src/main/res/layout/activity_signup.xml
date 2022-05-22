@@ -134,7 +134,7 @@
             android:id="@+id/ed_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Phone number"
+            android:hint="@string/phone_number"
             android:inputType="textEmailAddress"
             android:textColor="@color/darkBlue"
             android:textColorHint="@color/blue" />

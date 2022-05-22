@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
         android:foreground="@drawable/corner"
-        android:text="Next"
+        android:text="@string/next"
         android:textSize="20dp"
         android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
         app:layout_constraintEnd_toEndOf="parent"
