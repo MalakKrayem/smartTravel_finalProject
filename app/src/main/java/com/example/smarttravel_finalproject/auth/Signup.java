@@ -18,6 +18,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Signup extends AppCompatActivity {
     ActionBar actionBar;
@@ -28,6 +30,8 @@ public class Signup extends AppCompatActivity {
     EditText phone;
     Button signup;
     FirebaseAuth auth;
+    FirebaseDatabase database=FirebaseDatabase.getInstance();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,8 @@ public class Signup extends AppCompatActivity {
         phone=findViewById(R.id.ed_phone);
         signup=findViewById(R.id.btn_signup);
         auth = FirebaseAuth.getInstance();
+        DatabaseReference reference=database.getReference("Users&Admins");
+        UserAndAdmin person=new UserAndAdmin();
 
 
         signup.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +62,14 @@ public class Signup extends AppCompatActivity {
                     Log.d("mm","pass null");
                 }
                 Task<AuthResult> result=auth.createUserWithEmailAndPassword(emailAddress,pass);
+                DatabaseReference modelLocation=reference.push();
+                person.setId(modelLocation.getKey());
+                person.setFirstName(first_name.getText().toString());
+                person.setLastName(last_name.getText().toString());
+                person.setEmail(emailAddress);
+                person.setPhoneNumber(phone.getText().toString());
+                person.setType("User");
+                modelLocation.setValue(person);
                 Log.d("mm","hello1");
                 result.addOnCompleteListener(task -> {
                     if(task.isSuccessful()){

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.smarttravel_finalproject.R;
+import com.example.smarttravel_finalproject.UserUI.UserMainActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -63,9 +65,12 @@ public class ForgetPassword extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
                             if (task.isSuccessful()){
-                                Log.d("DDDD" , "VerifyPhone: Successful go To Home");
+                                Toast.makeText(ForgetPassword.this, "Verifed Successfuly", Toast.LENGTH_SHORT).show();
+                                Intent i=new Intent(getApplicationContext(), UserMainActivity.class);
+                                startActivity(i);
                             }else{
-                                Log.d("DDDD" , "VerifyPhone: Failed " + task.getException().getLocalizedMessage());
+                                Toast.makeText(ForgetPassword.this, "Verifed faild, Try again!", Toast.LENGTH_SHORT).show();
+
                             }
                         }
                     });

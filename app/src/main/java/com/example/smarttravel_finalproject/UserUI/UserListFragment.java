@@ -68,8 +68,8 @@ public class UserListFragment extends Fragment {
         userTrips=view.findViewById(R.id.rv_UserTrips);
         LinearLayoutManager manager=new LinearLayoutManager(context);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
-        userTrips.setAdapter(adapter);
         userTrips.setLayoutManager(manager);
+        userTrips.setAdapter(adapter);
         return view;
     }
     @Override

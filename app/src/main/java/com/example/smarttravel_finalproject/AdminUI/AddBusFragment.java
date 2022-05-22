@@ -53,8 +53,6 @@ public class AddBusFragment extends Fragment {
         DatabaseReference reference=database.getReference("Buses");
         Bus bus=new Bus();
 
-
-
         addBus.setOnClickListener(view1 -> {
             Toast.makeText(container.getContext(), soure.getText().toString(), Toast.LENGTH_SHORT).show();
             //حجز id
