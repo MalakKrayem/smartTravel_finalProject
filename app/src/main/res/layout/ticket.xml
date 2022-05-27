@@ -3,15 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/darkBlue"
         android:elevation="10dp"
+        android:backgroundTint="#A2A9D1"
         app:cardElevation="20dp"
         app:cardCornerRadius="10dp"
+        android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +30,6 @@
                 android:id="@+id/tv_from"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="From: Gaza"
                 android:textColor="@color/darkBlue"
                 android:textSize="25dp"
@@ -37,18 +39,18 @@
                 android:id="@+id/tv_todes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="To: Hebron"
                 android:textColor="@color/darkBlue"
                 android:textSize="25dp"
+                android:layout_marginLeft="15dp"
                 android:fontFamily="@font/playfair_display_bold"/>
 
             <TextView
                 android:id="@+id/tv_ticketPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="200 $"
+                android:layout_marginLeft="15dp"
                 android:textColor="@color/darkBlue"
                 android:textSize="25dp"
                 android:fontFamily="@font/playfair_display_bold"/>

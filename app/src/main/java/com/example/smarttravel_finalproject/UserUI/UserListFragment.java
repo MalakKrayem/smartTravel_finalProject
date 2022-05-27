@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
 /**
+ *
  * A simple {@link Fragment} subclass.
  * create an instance of this fragment.
  */
@@ -50,12 +52,15 @@ public class UserListFragment extends Fragment {
         Query query = reference.limitToLast(50);
         FirebaseRecyclerOptions<Trip> options=new FirebaseRecyclerOptions.Builder<Trip>()
                 .setQuery(query,Trip.class).build();
-
+        Log.d("mm","before");
         adapter=new FirebaseRecyclerAdapter<Trip, UserTripsHolder> (options){
             @NonNull
             @Override
             public UserTripsHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                Log.d("mm","inflate");
+
                 return new UserTripsHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.ticket,parent,false));
+
             }
 
             @Override
@@ -63,9 +68,10 @@ public class UserListFragment extends Fragment {
                 holder.source.setText("From: "+model.getSource());
                 holder.destination.setText("To: "+model.getDestination());
                 holder.price.setText(model.getPrice());
+
             }
         };
-        userTrips=view.findViewById(R.id.rv_UserTrips);
+        userTrips=view.findViewById(R.id.rv_userList);
         LinearLayoutManager manager=new LinearLayoutManager(context);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         userTrips.setLayoutManager(manager);
